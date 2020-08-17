@@ -43,9 +43,6 @@ const getWeather = (lat, lon, callback) => {
             wind_speed,
             wind_dir,
           }
-
-          // `${weather_descriptions[0]}\nIt is ${temperature} degrees out\nIt feels like ${feelslike} degrees\nThere is a ${precip} % chance of rain\nUV Index: ${uv_index}  \nCloudcover: ${cloudcover} %  \nHumidity: ${humidity} %
-          // `
         );
       }
     }
