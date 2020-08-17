@@ -1,5 +1,3 @@
-console.log("client side JavaScript");
-
 const url = "http://localhost:3333/weather";
 const weatherForm = document.querySelector("form");
 const weatherContent = document.querySelector(".content");
