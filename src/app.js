@@ -5,6 +5,7 @@ const getLocation = require("./utils/getLocation");
 const getWeather = require("./utils/getWeather");
 
 const app = express();
+const port = process.env.PORT || 5000;
 
 // Define paths hor Express config
 const publicDir = path.join(__dirname, "../public");
@@ -77,9 +78,9 @@ app.get("*", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running at localhost:${PORT}`);
+
+app.listen(port, () => {
+  console.log(`Server running at localhost:${port}`);
 });
 
 module.exports = app;

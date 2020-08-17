@@ -1,4 +1,5 @@
-const url = "http://localhost:3333/weather";
+// const url = "http://localhost:3333/weather";
+const url = "/weather";
 const weatherForm = document.querySelector("form");
 const weatherContent = document.querySelector(".content");
 const locationInput = document.querySelector("#weather");
