@@ -57,7 +57,7 @@ app.get("/weather", (req, res) => {
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help Page",
-    helpText: "Some helpful text",
+    helpText: "Type in search field a location name that you want to get weather forecast and hit enter key or search button",
     name: author,
   });
 });
