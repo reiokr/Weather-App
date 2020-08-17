@@ -13,9 +13,9 @@ const getLocation = (locationName, callback) => {
     },
     (error, response) => {
       if (error) {
-        callback("Unable to connect to Location services!", undefined);
+        callback("Unable to connect services!", undefined);
       } else if (response.body.features.length < 1) {
-        callback("Unable to find location. Try another search.", undefined);
+        callback("Unable to find location.", undefined);
       } else {
         const { center, place_name } = response.body.features[0]; // destruct response.body.features
         const [lat, lon] = center; // destruct latitude and longitude
