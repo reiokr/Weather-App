@@ -1,11 +1,11 @@
-// const url = "http://localhost:3333/weather";
-const url = "/weather";
+const url = "http://localhost:3333/weather";
+// const url = "/weather";
 const weatherForm = document.querySelector("form");
 const weatherContent = document.querySelector(".content");
 const locationInput = document.querySelector("#weather");
-const loader = document.createElement('h2')
-loader.textContent ="Loading...";
-loader.className =('loader')
+const loader = document.createElement("h2");
+loader.textContent = "Loading...";
+loader.className = "loader";
 const defaultLocation = "London";
 // weather location is provided from local storage or default location
 let weatherLocation =
@@ -20,7 +20,7 @@ async function getData(loc) {
       showMsg(data.error, "red", 3000);
       // if data error then set location in local storage equal to weatherLocation value to prevent storing not foud location
       localStorage.setItem("weatherLocation", weatherLocation);
-      loader.remove()
+      loader.remove();
       return;
     }
     // if no errors call showWeather function
@@ -40,7 +40,7 @@ weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const input = locationInput.value;
 
-  weatherContent.appendChild(loader)
+  weatherContent.appendChild(loader);
   // fetch weather data using user provided location
   getData(input);
 
